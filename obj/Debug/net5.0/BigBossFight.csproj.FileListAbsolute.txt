@@ -1,0 +1,16 @@
+C:\Users\mykola.gleba\source\repos\BigBossFight\bin\Debug\net5.0\BigBossFight.exe
+C:\Users\mykola.gleba\source\repos\BigBossFight\bin\Debug\net5.0\BigBossFight.deps.json
+C:\Users\mykola.gleba\source\repos\BigBossFight\bin\Debug\net5.0\BigBossFight.runtimeconfig.json
+C:\Users\mykola.gleba\source\repos\BigBossFight\bin\Debug\net5.0\BigBossFight.runtimeconfig.dev.json
+C:\Users\mykola.gleba\source\repos\BigBossFight\bin\Debug\net5.0\BigBossFight.dll
+C:\Users\mykola.gleba\source\repos\BigBossFight\bin\Debug\net5.0\ref\BigBossFight.dll
+C:\Users\mykola.gleba\source\repos\BigBossFight\bin\Debug\net5.0\BigBossFight.pdb
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.csprojAssemblyReference.cache
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.AssemblyInfoInputs.cache
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.AssemblyInfo.cs
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.csproj.CoreCompileInputs.cache
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.dll
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\ref\BigBossFight.dll
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.pdb
+C:\Users\mykola.gleba\source\repos\BigBossFight\obj\Debug\net5.0\BigBossFight.genruntimeconfig.cache
