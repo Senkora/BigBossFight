@@ -39,7 +39,7 @@ namespace BigBossFight
             bool bothAreAlive = true;
             while (bothAreAlive)
             {
-                //лщалыв kdsd
+                
                 // сама фаза боя, если оба учасника жыви
                 if (bossHelth > 0 && playerHelth > 0)
                 {
