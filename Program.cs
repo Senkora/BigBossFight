@@ -40,6 +40,10 @@ namespace BigBossFight
             while (bothAreAlive)
             {
                 
+
+
+
+
                 // сама фаза боя, если оба учасника жыви
                 if (bossHelth > 0 && playerHelth > 0)
                 {
