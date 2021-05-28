@@ -7,26 +7,23 @@ namespace BigBossFight
         static void Main(string[] args)
         {
             //приветствие
-            Console.WriteLine("Приветсвую! \n Вы наконец достигли конца своего долгого путишествия полного приключений.\n " +
-                "Но что бы отправиться на заслуженный покой вам необходимо пройти последнее испытание!");
+            Console.WriteLine("Hello! \n You have finally reached the end of your long journey full of adventures. \n" +
+                " But in order to go to your well-deserved rest, you must pass the last test!");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Битва с фитальным Босом!!\n \n");
+            Console.WriteLine("Battle with Fital Boss !!\n \n");
             Console.ResetColor();
 
-            Console.WriteLine("Напомни, как тебя зовут");
+            Console.WriteLine("Remind me what your name is");
             string name = Console.ReadLine();
 
-            Console.ReadKey();
 
-
-            Console.WriteLine("представление босса");
-            Console.WriteLine("ввод в битву");
+            Console.WriteLine("boss interction");
+            Console.WriteLine("battle interction");
 
 
             //Генерация жизней противников
-            Random rnd = new Random();
 
-            int bossHelth = rnd.Next(1000, 1501);
+            int bossHelth = new Random().Next(1000, 1501);
             int maxBossHelth = bossHelth;
             int playerHelth = 800;
             int maxPlayerHelth = 800;
@@ -42,7 +39,7 @@ namespace BigBossFight
             bool bothAreAlive = true;
             while (bothAreAlive)
             {
-
+                //лщалыв kdsd
                 // сама фаза боя, если оба учасника жыви
                 if (bossHelth > 0 && playerHelth > 0)
                 {
@@ -50,13 +47,13 @@ namespace BigBossFight
                     Console.WriteLine("ввод в ход босса ");
                     //генерация выбора босса
                    
-                    int bossChose = rnd.Next(0, 5);
+                    int bossChose = new Random().Next(0, 5);
                     switch (bossChose)
                     {
                         //слабый удар
                         case 1:
                             Console.WriteLine("описание слабого удара");
-                            int weakAtack = rnd.Next(50, 130);
+                            int weakAtack = new Random().Next(50, 130);
                             Console.WriteLine("{0} damage", weakAtack);
                             playerHelth -= weakAtack - (weakAtack * playerArmmor / 100 );
                             playerArmmor -= 5 * playerArmmor / 100;
@@ -64,7 +61,7 @@ namespace BigBossFight
                         //силный удар
                         case 2:
                             Console.WriteLine("описание сильного удара");
-                            int strongAtack = rnd.Next(125, 300);
+                            int strongAtack = new Random().Next(125, 300);
                             Console.WriteLine("{0} damage", strongAtack);
                             playerHelth -= strongAtack - (strongAtack * playerArmmor / 100);
                             playerArmmor -= 10 * playerArmmor / 100;
@@ -72,8 +69,8 @@ namespace BigBossFight
                         //способность
                         case 3:
                             Console.WriteLine("описание способности");
-                            int specialAtack = rnd.Next(50, 500);
-                            int atackDirection = rnd.Next(1,4);
+                            int specialAtack = new Random().Next(50, 500);
+                            int atackDirection = new Random().Next(1,4);
                             Console.WriteLine("in which direction will they dodge ");
                             int dodgeDirection = Convert.ToInt32(Console.ReadLine());
 
@@ -94,7 +91,7 @@ namespace BigBossFight
                             if (bossHelth < maxBossHelth)
                             {
 
-                                int healAtempt = rnd.Next(100, 300);
+                                int healAtempt = new Random().Next(100, 300);
                                 if (bossHelth + healAtempt > maxBossHelth) 
                                 {
                                     healAtempt = (bossHelth + healAtempt) - maxBossHelth;
@@ -115,7 +112,7 @@ namespace BigBossFight
                         //+броня
                         case 5:
                             Console.WriteLine("босс повышает броню");
-                            int bossArmmorAdd = rnd.Next(5, 15);
+                            int bossArmmorAdd = new Random().Next(5, 15);
                             bossArmmor += bossArmmorAdd;
                             Console.WriteLine("{0} add armor. boss armor is {1}", bossArmmorAdd, bossArmmor);
                             break;
