@@ -6,6 +6,23 @@ namespace BigBossFight
     {
         static void Main(string[] args)
         {
+
+            Unit boss = new Unit();
+            boss.GenerateUnitStat = 1200;
+            Console.WriteLine("Armor --  {0}, Heath -- {1} \n", boss.GetArmor , boss.GetHelth);
+            int i =0;
+            while (i != 10)
+            {
+                
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(boss.IncomeDamageHelth = new Random().Next(30, 200));
+                Console.ResetColor();
+                Console.WriteLine("Armor --  {0}, Heath -- {1} \n", boss.GetArmor, boss.GetHelth);
+                i++;
+            }
+            
+
+            /*
             //приветствие
             Console.WriteLine("Hello! \n You have finally reached the end of your long journey full of adventures. \n" +
                 " But in order to go to your well-deserved rest, you must pass the last test!");
@@ -174,7 +191,7 @@ namespace BigBossFight
 
             }
 
-
+            */
         }
     }
 }
