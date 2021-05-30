@@ -18,14 +18,13 @@ namespace BigBossFight
                 helth = new Random().Next(value, value + 35 * (value / 100));
                 armor = new Random().Next(value / 100, 3 * value / 100);
                 maxHelth = helth;
-
-
             }
-
         }
+
 
         public int IncomeDamageHelth
         {
+            //сделать как с хилом
             set
             {
                 helth -= value - (value * armor / 100);
@@ -55,17 +54,39 @@ namespace BigBossFight
                     {
                         armor -= armorSmallDestruction;
                     }
-
                 }
             }
         }
+
+
         public int IncomeHeal
         {
             set
             {
-                helth += value;
+
+                if (value + helth > maxHelth)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(value - ((helth + value) - maxHelth));
+                    Console.ResetColor();
+                    helth += value - ((helth + value) - maxHelth);
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(value);
+                    Console.ResetColor();
+                    helth += value;
+                }
             }
         }
+
+        public int Chose(int maxChoseNumber)
+        {
+            int chose = new Random().Next(0, maxChoseNumber);
+            return chose;
+        }
+
 
         public int IncomeArmorRepare
         {
@@ -75,6 +96,7 @@ namespace BigBossFight
             }
         }
 
+
         public int GetHelth
         {
             get
@@ -83,6 +105,8 @@ namespace BigBossFight
 
             }
         }
+
+
         public int GetArmor
         {
             get

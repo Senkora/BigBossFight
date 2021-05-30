@@ -8,24 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\mykola.gleba\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Пользователь\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mykola.gleba\\source\\repos\\BigBossFight\\BigBossFight.csproj",
+      "projectUniqueName": "C:\\Users\\Пользователь\\Source\\Repos\\BigBossFight\\BigBossFight.csproj",
       "projectName": "BigBossFight",
-      "projectPath": "C:\\Users\\mykola.gleba\\source\\repos\\BigBossFight\\BigBossFight.csproj",
-      "packagesPath": "C:\\Users\\mykola.gleba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mykola.gleba\\source\\repos\\BigBossFight\\obj\\",
+      "projectPath": "C:\\Users\\Пользователь\\Source\\Repos\\BigBossFight\\BigBossFight.csproj",
+      "packagesPath": "C:\\Users\\Пользователь\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Пользователь\\Source\\Repos\\BigBossFight\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mykola.gleba\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Пользователь\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
