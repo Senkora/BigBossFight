@@ -22,7 +22,7 @@ namespace BigBossFight
                   Console.WriteLine(boss.IncomeDamageHelth = new Random().Next(30, 200));
                   Console.ResetColor();
                   Console.WriteLine("Armor --  {0}, Heath -- {1} \n", boss.GetArmor, boss.GetHelth);
-                  Tick.IsBothAlive(boss.GetHelth, player.GetHelth);
+                 
               }
             */
 
@@ -62,9 +62,10 @@ namespace BigBossFight
 
                     Console.WriteLine("Boss do some ting. He has "+ boss.GetHelth + " heals and " + boss.GetArmor +" armor");
                     //генерация выбора босса
+                    //сделать многоходовые способности боссу
                    
                     
-                    switch (boss.Chose(4))
+                    switch (boss.Chose(5))
                     {
                         //слабый удар
                         case 0:
@@ -91,14 +92,14 @@ namespace BigBossFight
                             else
                             {
                                 Console.WriteLine("Boss hit you");
-                                Console.WriteLine("Boss do " + (player.IncomeDamageHelth = new Random().Next(30, 200)) + " damage");
+                                Console.WriteLine("Boss do " + (player.IncomeDamageHelth = new Random().Next(30, specialAtack)) + " damage");
                             }
                             break;
                         //самохил
                         case 3:
                             Console.WriteLine("Boss try to heal");
                             Console.Write("Boss heal self at ");
-                            boss.IncomeHeal = new Random().Next(100, 300);
+                            boss.IncomeHeal = new Random().Next(50, 300);
                             Console.Write(" heath. And now it {0} \n",  boss.GetHelth);
                             break;
                         //+броня
@@ -109,6 +110,7 @@ namespace BigBossFight
 
 
                     Console.WriteLine("ввод в ход игрока hp {0} ; armmor {1}", player.GetHelth, player.GetArmor);
+                    
                     /* int playerChose = Convert.ToInt32(Console.ReadLine());
                      switch (playerChose)
                      {
@@ -130,37 +132,16 @@ namespace BigBossFight
                          //+броня
                          case 6:
                              break;
+                        //блок на один ход
+                        case 7:
+                            brake;
                      }
  
                     Console.ReadKey();
                     */
+                    Tick.IsBothAlive(boss.GetHelth, player.GetHelth);
                 }
-                /*
-                //бос умер
-                if (bossHelth <= 0 && player.GetHelth > 0)
-                {
-                    Console.WriteLine("что-то радосное ");
-                    bothAreAlive = false;
-                }
-                //игрок умер
-                if (player.GetHelth <= 0 && bossHelth > 0)
-                {
-                    Console.WriteLine("что-то грусно");
-                    bothAreAlive = false;
-                }
-                //оба скопытились
-                if (player.GetHelth <= 0 && bossHelth <= 0)
-                {
-                    Console.WriteLine("что-то не понятное ");
-                    bothAreAlive = false;
-                }
-                */
-
-
-
             }
-
-            
         }
     }
 }

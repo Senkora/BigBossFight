@@ -11,14 +11,27 @@ namespace BigBossFight
 
         public static void IsBothAlive ( int bossHelth, int playerHelth )
         {
-            if (bossHelth <= 0 ^ playerHelth <=0)
+            //босс умер
+            if (bossHelth <= 0 && playerHelth > 0)
             {
+                Console.WriteLine("что-то радосное ");
                 Globals.BothAreAlive = false;
-                Console.WriteLine("Someone  is ded");
             }
-
+            //игрок умер
+            if (playerHelth <= 0 && bossHelth > 0)
+            {
+                Console.WriteLine("что-то грусно");
+                Globals.BothAreAlive = false;
+            }
+            //оба скопытились
+            if (playerHelth <= 0 && bossHelth <= 0)
+            {
+                Console.WriteLine("что-то не понятное ");
+                Globals.BothAreAlive = false;
+            }
         }
 
-
+        //добавить провекрку на кровотечение
+        //кровотечение должно игнорировать броню
     }
 }

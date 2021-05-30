@@ -25,6 +25,7 @@ namespace BigBossFight
         public int IncomeDamageHelth
         {
             //сделать как с хилом
+            //разделить урон броне и хп
             set
             {
                 helth -= value - (value * armor / 100);
