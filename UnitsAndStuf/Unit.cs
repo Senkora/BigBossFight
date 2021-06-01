@@ -10,6 +10,8 @@ namespace BigBossFight
         int maxHelth;
         //  int special = 1;
         int damage;
+        bool bleed = false;
+        int bleedCount = -1;
 
 
         public void GenerateUnitStat(int avrHelth, int setDamage)
@@ -42,7 +44,6 @@ namespace BigBossFight
             return chose;
         }
 
-
         public int Helth
         {
             set
@@ -54,6 +55,7 @@ namespace BigBossFight
                 return helth;
             }
         }
+
         public int MaxHelth
         {
 
@@ -92,6 +94,37 @@ namespace BigBossFight
             {
                 return name;
             }
+        }
+
+        public bool IsBleed
+        {
+            get
+            {
+                if (bleedCount == 0)
+                {
+                    bleed = false;
+                    bleedCount--;
+                }
+
+                return bleed;
+            }
+        }
+        public int BleadCounter
+        {
+            set
+            {
+                bleedCount = value;
+            }
+            get
+            {
+                return bleedCount;
+            }
+        }
+
+        public void AddBleed(int count)
+        {
+            bleedCount += count;
+            bleed = true;
         }
     }
 }

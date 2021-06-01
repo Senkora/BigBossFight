@@ -24,16 +24,12 @@ namespace BigBossFight
 
             while (Globals.BothAreAlive)
             {
-
                 // сама фаза боя, если оба учасника живи
                 if (Globals.BothAreAlive)
                 {
-
                     Console.WriteLine("Boss do someting. He has " + boss.Helth + " heals and " + boss.Armor + " armor");
                     //генерация выбора босса
                     //сделать многоходовые способности боссу
-
-
                     switch (boss.Chose(4))
                     {
                         //слабый удар
@@ -62,18 +58,19 @@ namespace BigBossFight
                                 Console.WriteLine("Boss hit you");
                                 Actions.DamageHealth(player, (boss.getStrondDamage * 3));
                             }
+
                             break;
                         //самохил
                         case 3:
                             Console.WriteLine("Boss uses healing magic!!");
                             Actions.Heal(boss);
-                            
                             break;
                         //+броня
                         case 4:
                             Console.WriteLine("босс повышает броню");
                             break;
                     }
+                    Tick.BleedTick(boss);
                     Tick.IsBothAlive(boss.Helth, player.Helth);
                     if (!Globals.BothAreAlive)
                     {
@@ -81,35 +78,36 @@ namespace BigBossFight
                     }
 
                     Console.WriteLine("ввод в ход игрока hp {0} ; armmor {1}", player.Helth, player.Armor);
-/*
-                    int playerChose = Convert.ToInt32(Console.ReadLine());
-                    switch (playerChose)
-                    {
-                        //слабый удар
-                        case 1:
-                            break;
-                        //силный удар
-                        case 2:
-                            break;
-                        //способность шаг 1
-                        case 3:
-                            break;
-                        //способность шаг 2
-                        case 4:
-                            break;
-                        //самохил
-                        case 5:
-                            break;
-                        //+броня
-                        case 6:
-                            break;
-                        //блок на один ход
-                        case 7:
-                            brake;
-                    }
+                    /*
+                                        int playerChose = Convert.ToInt32(Console.ReadLine());
+                                        switch (playerChose)
+                                        {
+                                            //слабый удар
+                                            case 1:
+                                                break;
+                                            //силный удар
+                                            case 2:
+                                                break;
+                                            //способность шаг 1
+                                            case 3:
+                                                break;
+                                            //способность шаг 2
+                                            case 4:
+                                                break;
+                                            //самохил
+                                            case 5:
+                                                break;
+                                            //+броня
+                                            case 6:
+                                                break;
+                                            //блок на один ход
+                                            case 7:
+                                                brake;
+                                        }
 
-                    Console.ReadKey();
-                    */
+                                        Console.ReadKey();
+                                        */
+                    Tick.BleedTick(player);
                     Tick.IsBothAlive(boss.Helth, player.Helth);
                 }
             }

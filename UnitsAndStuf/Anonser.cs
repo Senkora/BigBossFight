@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BigBossFight
 {
     class Anonser
     {
-        public static void Intro(Unit boss , Unit player)
+        public static void Intro(Unit boss, Unit player)
         {
             Console.WriteLine("Hello! \n You have finally reached the end of your long journey full of adventures. \n" +
                " But in order to go to your well-deserved rest, you must pass the last test!\n");
@@ -23,6 +19,7 @@ namespace BigBossFight
             Console.WriteLine("boss interction");
             Console.WriteLine("battle interction");
         }
+
         public static void SayDamage(int damage, Unit unit)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -34,6 +31,7 @@ namespace BigBossFight
             Console.ResetColor();
             Console.Write(" damage!\n\n");
         }
+
         public static void SayHeal(int heal, Unit unit)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
